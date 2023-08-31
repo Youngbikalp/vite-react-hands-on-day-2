@@ -6,6 +6,10 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
+  const getMessage = () => {
+    return count % 2 === 0 ? "Even Count" : "Odd Count";
+  };
+
   return (
     <>
       <div>
@@ -17,10 +21,13 @@ function App() {
         </a>
       </div>
       <h1>This is my first React/Vite web application</h1>
+      <h3>It also checks if the count is even or odd</h3>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          Increase Count
         </button>
+        <p>Count is {count}</p>
+        <p>{getMessage()}</p>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
