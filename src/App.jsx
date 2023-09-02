@@ -6,36 +6,56 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  const getMessage = () => {
-    return count % 2 === 0 ? "Even Count" : "Odd Count";
-  };
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>This is my first React/Vite web application</h1>
-      <h3>It also checks if the count is even or odd</h3>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Increase Count
-        </button>
-        <p>Count is {count}</p>
-        <p>{getMessage()}</p>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <header>
+        <h1>Gaming Geeks</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Games</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <section>
+          <h2>GTA V</h2>
+          <p>
+            Grand Theft Auto V is an action-adventure game played from either a
+            third-person or first-person perspective.
+          </p>
+        </section>
+
+        <section>
+          <h2>League of Legends</h2>
+          <p>
+            a team-based competitive game mode based on strategy and outplaying
+            opponents.
+          </p>
+        </section>
+
+        <aside>
+          <h2>Aside</h2>
+          <p>This is some additional content in the aside.</p>
+        </aside>
+      </main>
+
+      <footer>
+        <p>&copy; 2023. All rights reserved.</p>
+      </footer>
+    </div>
   );
 }
 
